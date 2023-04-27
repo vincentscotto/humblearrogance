@@ -26,7 +26,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   background: #ffffff;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: hidden; }
 
 .greeting {
   position: absolute;
