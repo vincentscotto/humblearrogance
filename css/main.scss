@@ -19,21 +19,25 @@ Mixins
 -------------------*/
 
 @mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }  
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }  
-    @keyframes #{$animation-name} {
-        @content;
-    }
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
 
 // Cross-browser animation
@@ -67,9 +71,9 @@ Mixins
 @mixin gradient ($background, $position, $from, $to) {
   background-color: $background;
   background-image: -webkit-linear-gradient(top, $from, $to);
-  background-image:    -moz-linear-gradient(top, $from, $to);
-  background-image:     -ms-linear-gradient(top, $from, $to);
-  background-image:      -o-linear-gradient(top, $from, $to);
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: -ms-linear-gradient(top, $from, $to);
+  background-image: -o-linear-gradient(top, $from, $to);
 }
 
 // Cross-browser text shadow
@@ -130,7 +134,9 @@ Mixins
 }
 
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -138,27 +144,28 @@ body {
   // background: #1C1D21;
   background: $white;
   box-sizing: border-box;
-  overflow: hidden;
+  // overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .greeting {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
   color: #fff;
   padding: 10px;
 
   &:before {
-    position: absolute;
-    display: inline-block;
+    // position: absolute;
+    // display: inline-block;
     // content: 'ha';
-    top: 0;
+    // top: 0;
     background-color: $lightblue;
-    padding: 11px;
-    border-radius: 11%;
-    transform: translate(-50%, -50%);
+    // padding: 11px;
+    // border-radius: 11%;
+    // transform: translate(-50%, -50%);
+
   }
 
   h1 {
@@ -183,11 +190,11 @@ body {
 
     // &:after { content: ']'; }
 
-    &:hover:before { 
+    &:hover:before {
       transform: translateX(-5px);
     }
 
-    &:hover:after { 
+    &:hover:after {
       transform: translateX(5px);
     }
   }
@@ -195,9 +202,20 @@ body {
   .ohwell {
     color: $darkergrey;
   }
-
 }
 
+#year-in-progress {
+  color: #010101;
+  display: flex;
+  font-family: monospace;
+  flex-direction: column;
+  font-size: 14px;
+
+  p {
+    margin: 0;
+    padding: 10px 0;
+  }
+}
 
 @keyframes drop {
   70% {
@@ -292,12 +310,15 @@ $iconsize: 25px;
     span {
       @extend %line;
 
-      &:before, &:after {
+      &:before,
+      &:after {
         @extend %line;
       }
+
       &:before {
         top: -5px;
       }
+
       &:after {
         bottom: -5px;
       }
@@ -313,6 +334,7 @@ $iconsize: 25px;
           top: 0;
           transform: rotate(45deg);
         }
+
         &:after {
           top: 0;
           transform: rotate(-45deg);
