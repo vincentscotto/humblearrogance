@@ -238,23 +238,34 @@ body {
   filter: blur(1px);
 }
 
-.bb {
+.drip {
   position: relative;
   display: inline-block;
   color: $lightgrey;
 
   &:before {
     position: absolute;
-    bottom: 10px;
-    left: 78px;
+    bottom: 18px;
+    left: 137px;
     content: '';
     width: 10px;
     height: 10px;
-    background-color: $lightblue;
+    background-color: $darkergrey;
     @extend %drip;
   }
 
-  &:after {}
+  &:after {
+    position: absolute;
+    bottom: 18px;
+    left: 367px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: $darkergrey;
+    @extend %drip;
+
+    @include animation(drop 4.2s ease-in-out infinite);
+  }
 
   span {
     position: absolute;

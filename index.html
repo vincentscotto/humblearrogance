@@ -1,43 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-84236046-2"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84236046-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+			gtag("config", "UA-84236046-2");
+		</script>
 
-    gtag('config', 'UA-84236046-2');
-  </script>
+		<title>humble arrogance | 2023</title>
 
-  <title>humble arrogance | 2023</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="description"
+			content="HUMBLE ARROGANCE: the life and times of an introverted, dad, husband and front-end developer."
+		/>
+		<meta
+			name="keywords"
+			content="humble arrogance, introverted, dad, husband, front-end developer"
+		/>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HUMBLE ARROGANCE: the life and times of an introverted, dad, husband and front-end developer." />
-  <meta name="keywords" content="humble arrogance, introverted, dad, husband, front-end developer" />
+		<link
+			href="http://fonts.googleapis.com/css?family=Open+Sans"
+			rel="stylesheet"
+			type="text/css"
+		/>
 
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<section class="greeting">
+			<span class="drip"
+				><img
+					src="images/humblearrogance-upscaled.png"
+					alt="humble ARROGANCE"
+					style="width: 430px"
+			/></span>
+		</section>
+		<section>
+			<div id="year-in-progress"></div>
+		</section>
 
-  <link rel="stylesheet" href="css/main.css">
+		<pre class="ohwell">¯\_(ツ)_/¯</pre>
 
-</head>
-<body>
-
-  <section class="greeting">
-    <span class="bb"><img src="images/humblearrogance-upscaled.png" alt="humble ARROGANCE" style="width: 430px;" /></span>
-  </section>
-  <section>
-    <div id="year-in-progress"></div>
-  </section>
-
-  <pre class="ohwell">¯\_(ツ)_/¯</pre>
-
-  <script src="js/main.js"></script>
-
-</body>
+		<script src="js/main.js"></script>
+	</body>
 </html>
