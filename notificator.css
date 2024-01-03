@@ -1,0 +1,67 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap";
+:root {
+  --background: #0a0a0a;
+  --countdown: #fbc730;
+  --title: #f3eac3;
+  --offwhite: #f3eac3;
+  --seconds: #f4f4f40b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins";
+  background-color: var(--background);
+}
+
+h4 {
+  color: var(--title);
+  margin: 30px 0 0 0;
+}
+
+button {
+  position: relative;
+  margin-top: 10px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: #fff;
+  border: 2px solid var(--offwhite);
+  border-radius: 50%;
+}
+button #playIcon {
+  position: relative;
+  font-size: 20px;
+  left: 2px;
+  top: 2px;
+}
+button #stopIcon {
+  position: relative;
+  font-size: 30px;
+  top: 2px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#countdownDisplay {
+  position: relative;
+  z-index: -1;
+  font-size: 85px;
+  color: #fff;
+}
+#countdownDisplay .seconds {
+  font-weight: bold;
+  color: var(--countdown);
+}/*# sourceMappingURL=notificator.css.map */
