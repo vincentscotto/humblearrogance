@@ -60,7 +60,7 @@ body {
   display: flex;
   font-family: monospace;
   flex-direction: column;
-  font-size: 14px;
+  font-size: 12px;
 }
 #year-in-progress p {
   margin: 0;
