@@ -209,7 +209,7 @@ body {
   display: flex;
   font-family: monospace;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 14px;
 
   p {
     margin: 0;
@@ -378,5 +378,13 @@ $iconsize: 25px;
 @media screen and (max-width: 390px) {
   #year-in-progress {
     font-size: 12px;
+  }
+
+  .drip {
+
+    &:after {
+      bottom: 13px;
+      left: 303px;
+    }
   }
 }
